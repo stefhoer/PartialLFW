@@ -104,6 +104,7 @@ tbd
 ## References
 
 [^1]: K. Zhang, Z. Zhang, Z. Li, and Y. Qiao, “Joint face detection and alignment using multitask cascaded convolutional networks,” IEEE Signal Processing Letters, vol. 23, no. 10, pp. 1499–1503, 2016
+
 [^2]: [https://github.com/davidsandberg/facenet](https://github.com/davidsandberg/facenet) and [https://github.com/YYuanAnyVision/mxnet_mtcnn_face_detection](https://github.com/YYuanAnyVision/mxnet_mtcnn_face_detection)
 
 
