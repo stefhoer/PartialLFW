@@ -10,7 +10,7 @@ We provide the code to generate PartialLFW given LFW. Download the unaligned ima
 
 ## Alignment
 
-To align the faces we make use of 5 landmarks extracted by MTCNN [^1].  The alignment script is provided under  `align_dataset.py`, which is based on the code from [^2] [^3].
+To align the faces we make use of 5 landmarks extracted by MTCNN [^1].  The alignment script is provided under  `align_dataset.py`, which is based on the code from  [^2]  [^3].
 
 
 ## Generating Partial Faces
@@ -70,11 +70,7 @@ Akhmed_Zakayev	3	1
 
  The following images depict the three protocols for the non-centered case:
 
-![partial-holistic](https://github.com/stefhoer/partiallfw/raw/main/resources/partial-holistic.png) 
-
-![partial-same](https://github.com/stefhoer/partiallfw/raw/main/resources/partial-same.png)  
-
-![partial-cross](https://github.com/stefhoer/partiallfw/raw/main/resources/partial-cross.png)
+![partial-holistic](https://github.com/stefhoer/partiallfw/raw/main/resources/partial-holistic.png)  ![partial-same](https://github.com/stefhoer/partiallfw/raw/main/resources/partial-same.png)  ![partial-cross](https://github.com/stefhoer/partiallfw/raw/main/resources/partial-cross.png)
 
 ## Results
 
@@ -108,7 +104,6 @@ tbd
 ## References
 
 [^1]: K. Zhang, Z. Zhang, Z. Li, and Y. Qiao, “Joint face detection and alignment using multitask cascaded convolutional networks,” IEEE Signal Processing Letters, vol. 23, no. 10, pp. 1499–1503, 2016
-
 [^2]: [https://github.com/davidsandberg/facenet](https://github.com/davidsandberg/facenet)
 [^3]: [https://github.com/YYuanAnyVision/mxnet_mtcnn_face_detection](https://github.com/YYuanAnyVision/mxnet_mtcnn_face_detection)
 
