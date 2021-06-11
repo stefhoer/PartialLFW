@@ -70,7 +70,7 @@ Akhmed_Zakayev	3	1
 
  The following images depict the three protocols for the non-centered case:
 
-![partial-holistic](https://github.com/stefhoer/partiallfw/raw/main/resources/partial-holistic.png)  ![partial-same](https://github.com/stefhoer/partiallfw/raw/main/resources/partial-same.png)  ![partial-cross](https://github.com/stefhoer/partiallfw/raw/main/resources/partial-cross.png)
+![partial-holistic](https://github.com/stefhoer/partiallfw/raw/main/resources/protocols.png) 
 
 ## Results
 
