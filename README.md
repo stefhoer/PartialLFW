@@ -91,7 +91,7 @@ If you find PartialLFW useful in your research, please cite the following papers
 
 ~~~tex
 @misc{hoermann2021attention,
-	title={Attention-based Partial Face Recognition}, 
+    title={Attention-based Partial Face Recognition}, 
     author={Stefan H\"ormann and Zeyuan Zhang and Martin Knoche and Torben Teepe and Gerhard Rigoll},
     year={2021},
     eprint={2106.06415},
@@ -100,12 +100,12 @@ If you find PartialLFW useful in your research, please cite the following papers
 }
 
 @TechReport{LFWTechUpdate,
-	author={Huang, Gary B and Learned-Miller, Erik},
-  	title={Labeled Faces in the Wild: Updates and New Reporting Procedures},
-  	institution={University of Massachusetts, Amherst},
-  	year={2014},
-  	number={UM-CS-2014-003},
-  	month={May}
+    author={Huang, Gary B and Learned-Miller, Erik},
+    title={Labeled Faces in the Wild: Updates and New Reporting Procedures},
+    institution={University of Massachusetts, Amherst},
+    year={2014},
+    number={UM-CS-2014-003},
+    month={May}
 }
 ~~~
 

@@ -11,9 +11,6 @@ from tqdm import tqdm
 from align.detect_face import create_mtcnn, detect_face
 from align.mtcnn_detector import extract_image_chips
 
-os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
-os.environ["CUDA_VISIBLE_DEVICES"] = "0"
-
 
 def main(args):
     input_dir = args.input_dir
