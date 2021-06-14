@@ -1,5 +1,7 @@
 # PartialLFW
 
+[![arxiv](https://img.shields.io/badge/arXiv-2106.06415-red)](https://arxiv.org/abs/2106.06415) [![BibTeX](https://img.shields.io/badge/cite-BibTeX-yellow)](#Cite)
+
 We release a dataset to evaluate face verification performance for partial faces based on [Labeled Faces in the Wild dataset](http://vis-www.cs.umass.edu/lfw/). To generate partial faces, we crop rectangular face patches of nine different areas ranging from 9% to 73.7% of the original face around four landmarks: right/left eye, nose, and mouth. Next, we either leave the cropped face patches at their initial location and fill the remaining image with zeros (*non-centered*) or move the patch to the center and zero-pad to match the input resolution (*centered*). 
 
 ![dataset](https://github.com/stefhoer/partiallfw/raw/main/resources/dataset.png)
@@ -68,7 +70,7 @@ Akhmed_Zakayev	1	3
 Akhmed_Zakayev	3	1
 ```
 
- The following images depict the three protocols for the non-centered case:
+ The following image depicts the three protocols for the non-centered case:
 
 ![partial-holistic](https://github.com/stefhoer/partiallfw/raw/main/resources/protocols.png) 
 
@@ -89,7 +91,14 @@ If you find PartialLFW useful in your research, please cite the following papers
 
 ~~~tex
 ```
-tbd
+@misc{hoermann2021attention,
+      title={Attention-based Partial Face Recognition}, 
+      author={Stefan H\"ormann and Zeyuan Zhang and Martin Knoche and Torben Teepe and Gerhard Rigoll},
+      year={2021},
+      eprint={2106.06415},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}
 
 @TechReport{LFWTechUpdate,
   author={Huang, Gary B and Learned-Miller, Erik},

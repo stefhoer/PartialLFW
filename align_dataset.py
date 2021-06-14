@@ -16,7 +16,7 @@ PADDING = 0.3
 base_dir = '/mnt/ssd/datasets/LFW/'
 INPUT_DIR = os.path.join(base_dir, 'LFW')
 OUTPUT_DIR = os.path.join(base_dir, 'LFW_aligned')
-MODEL_DIR = '/mnt/ssd/pretrained_models/FacialLandmarks/MTCNN/'
+MODEL_DIR = 'align/model'
 
 print('Creating networks and loading parameters')
 with tf.Graph().as_default():
