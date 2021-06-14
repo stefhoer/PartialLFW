@@ -1,13 +1,15 @@
+import argparse
 import os
+import sys
+
+from imageio import imread, imwrite
+import numpy as np
+from skimage import transform, img_as_ubyte
 import tensorflow as tf
+from tqdm import tqdm
+
 from align.detect_face import create_mtcnn, detect_face
 from align.mtcnn_detector import extract_image_chips
-import numpy as np
-from imageio import imread, imwrite
-from skimage import transform, img_as_ubyte
-from tqdm import tqdm
-import argparse
-import sys
 
 os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
@@ -35,16 +37,14 @@ def main(args):
     nrof_successfully_aligned = 0
     for file_path in tqdm(file_paths, desc='Aligning... ', unit='imgs'):
         output_file_path = file_path.replace(input_dir, output_dir).replace('.jpg', '.png')
-        output_sub_dir = os.path.dirname(output_file_path)
-        if not os.path.exists(output_sub_dir):
-            os.makedirs(output_sub_dir, exist_ok=True)
-
         if not os.path.exists(output_file_path):
+            output_sub_dir = os.path.dirname(output_file_path)
+            if not os.path.exists(output_sub_dir):
+                os.makedirs(output_sub_dir, exist_ok=True)
             try:
                 img = imread(file_path)
             except (IOError, ValueError, IndexError) as e:
-                errorMessage = '{}: {}'.format(file_path, e)
-                print(errorMessage)
+                print('{}: {}'.format(file_path, e))
             else:
                 if len(img.shape) == 2:
                     img = np.tile(np.expand_dims(img, -1), [1, 1, 3])
@@ -76,7 +76,7 @@ def main(args):
     print('Number of successfully aligned images: %d' % nrof_successfully_aligned)
 
 
-def parse_arguments(argv):
+if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--input_dir', type=str,
                         help='Path to the dataset which will be aligned.',
@@ -86,8 +86,4 @@ def parse_arguments(argv):
                         default='/mnt/ssd/datasets/LFW/LFW_aligned')
     parser.add_argument('--image_size', type=int,
                         help='Image size (height, width) in pixels.', default=160)
-    return parser.parse_args(argv)
-
-
-if __name__ == '__main__':
-    main(parse_arguments(sys.argv[1:]))
+    main(parser.parse_args(sys.argv[1:]))
