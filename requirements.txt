@@ -4,3 +4,4 @@ six==1.15.0
 imageio==2.6.1
 scikit-image==0.16.2
 tqdm==4.27.0
+tensorflow==1.13.2
